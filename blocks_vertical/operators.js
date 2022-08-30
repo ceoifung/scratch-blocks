@@ -428,7 +428,25 @@ Blockly.Blocks['operator_round'] = {
     });
   }
 };
-
+Blockly.Blocks['operator_numbertostr'] = {
+  /**
+   * Block for rounding a numbers.
+   * @this Blockly.Block
+   */
+  init: function () {
+    this.jsonInit({
+      "message0": Blockly.Msg.OPERATORS_NUMBER2STR,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "NUM"
+        }
+      ],
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_number"]
+    });
+  }
+};
 Blockly.Blocks['operator_mathop'] = {
   /**
    * Block for "advanced" math ops on a number.
